@@ -1,0 +1,30 @@
+.layout {
+  display: grid;
+  grid-template-columns: 250px 1fr 250px;
+  grid-template-rows: 60px 100vh;
+  grid-template-areas: "h h h" "l o r";
+}
+
+.general {
+  background: rgba(82, 63, 95, 0.4);
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  margin-top: 10px;
+}
+
+.header {
+  grid-area: h;
+}
+
+.left {
+  grid-area: l;
+}
+
+.right {
+  grid-area: r;
+}
+
+.outlet {
+  grid-area: o;
+}
