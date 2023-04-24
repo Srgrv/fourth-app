@@ -1,10 +1,10 @@
-.left a {
+/* .left a {
   display: block;
   text-align: center;
   color: white;
   text-decoration: none;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 5px;
   border-radius: 20px;
   transition: 0.1s;
 }
@@ -16,4 +16,4 @@
 .left a:hover {
   transition: 0.4s;
   background-color: #fd764f;
-}
+} */

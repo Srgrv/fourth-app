@@ -1,12 +1,49 @@
 .collobarate {
   color: #ffffff;
-  height: 200px;
+  /* height: 200px; */
   border-radius: 15px;
-  padding: 20px;
+  padding: 10px 30px 10px 30px;
   margin-top: 10px;
   background: rgba(82, 63, 95, 0.4);
   margin-left: 10px;
   margin-right: 10px;
-  line-height: 200px;
-  text-align: center;
+  /* line-height: 200px; */
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "a n" "a b";
+}
+
+img {
+  width: 100px;
+}
+
+.avatar {
+  grid-area: a;
+}
+
+.name {
+  grid-area: n;
+  margin-left: 10px;
+}
+
+.button {
+  grid-area: b;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 50%;
+}
+
+.button div {
+  background-color: #fd764f;
+  height: 30px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  line-height: 30px;
+  cursor: pointer;
 }
