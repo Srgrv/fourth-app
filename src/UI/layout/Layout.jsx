@@ -8,7 +8,7 @@ import classes from "./Layout.module.css";
 const Layout = () => {
   return (
     <div className={classes.layout}>
-      <div className={`${classes.general} ${classes.header}`}>
+      <div className={` ${classes.header}`}>
         <Header />
       </div>
       <div className={`${classes.general} ${classes.left}`}>

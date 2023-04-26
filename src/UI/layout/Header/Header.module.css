@@ -1,4 +1,9 @@
 .header {
-  color: white;
-  grid-area: h;
+  /* color: white;
+  grid-area: h; */
+  padding: 5px;
+}
+
+.header Button {
+  margin: 0;
 }

@@ -6,7 +6,6 @@ import classes from "./Collobarate.module.css";
 const avatar = "../../../../logo192.png";
 
 const Collobarate = (props) => {
-  console.log(props);
   const [follow, setFollow] = useState(true);
 
   const change = () => {

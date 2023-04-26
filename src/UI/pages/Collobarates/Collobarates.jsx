@@ -2,8 +2,6 @@ import React from "react";
 import Collobarate from "../../components/Collobarate/Collobarate";
 
 const Collobarates = (props) => {
-  console.log(props);
-
   const friends = props.collobarates.map((item, index) => {
     return (
       <div key={index}>
@@ -12,19 +10,7 @@ const Collobarates = (props) => {
     );
   });
 
-  return (
-    <div>
-      {friends}
-      {/* <Collobarate />
-      <Collobarate />
-      <Collobarate />
-      <Collobarate />
-      <Collobarate />
-      <Collobarate /> */}
-      {/* <Collobarate />
-      <Collobarate /> */}
-    </div>
-  );
+  return <div>{friends}</div>;
 };
 
 export default Collobarates;
