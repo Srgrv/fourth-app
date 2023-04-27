@@ -5,7 +5,7 @@ const Main = (props) => {
   return (
     <div className={classes.main}>
       <div className={classes.avatar}>
-        <img src={props.avatar} />
+        <img src={props.avatar} alt="" />
       </div>
       <div className={classes.name}>
         <div>{props.fullName}</div>

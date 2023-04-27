@@ -1,5 +1,5 @@
 import "./App.css";
-import Main from "./UI/pages/Main/Main";
+// import Main from "./UI/pages/Main/Main";
 import Layout from "./UI/layout/Layout";
 import { Routes, Route } from "react-router-dom";
 import CollobaratesContainer from "./UI/pages/Collobarates/CollobaratesContainer/CollobaratesContainer";

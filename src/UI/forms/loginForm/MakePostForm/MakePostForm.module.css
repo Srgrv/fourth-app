@@ -1,0 +1,51 @@
+.makePost {
+  color: white;
+  background-color: rgba(82, 63, 95, 0.4);
+  border-radius: 15px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "a n";
+  margin-top: 10px;
+}
+
+.input {
+  grid-area: a;
+}
+
+.input input {
+  border-radius: 25px 0 0 25px;
+  border: none;
+  height: 30px;
+  padding: 0;
+  padding-left: 10px;
+  width: 362px;
+}
+
+.button {
+  grid-area: n;
+
+  display: flex;
+  flex-direction: row;
+  /* border-radius: 0 25px 25px 0; */
+}
+
+.button button {
+  /* background-color: #fd764f; */
+  height: 30px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 25px 25px 0;
+  line-height: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  background-color: white;
+}
+
+.button button:hover {
+  background-color: #fd764f;
+  transition: 0.3s;
+}
