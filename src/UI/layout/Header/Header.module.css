@@ -2,8 +2,14 @@
   /* color: white;
   grid-area: h; */
   padding: 5px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.header Button {
+/* .header Button {
   margin: 0;
+} */
+
+.header a {
+  margin-right: 10px;
 }

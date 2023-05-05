@@ -15,7 +15,7 @@ const Collobarate = (props) => {
 
   return (
     <div className={classes.collobarate}>
-      <NavLink to="" className={classes.avatar}>
+      <NavLink to={`/${props.id}`} className={classes.avatar}>
         <img src={avatar} alt="" />
       </NavLink>
       <div className={classes.name}>{props.name}</div>

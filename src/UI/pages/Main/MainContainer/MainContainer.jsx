@@ -7,6 +7,7 @@ import MakePostReduxForm from "../../../forms/loginForm/makePostForm/makePostFor
 import { withRouter } from "../../../../hoc/withRouter";
 import { getProfile } from "../../../../BLL/homeReducer";
 import { addPost } from "../../../../BLL/homeReducer";
+import { getAuth } from "../../../../BLL/loginReducer";
 
 class MainContainer extends React.Component {
   onSubmit = (formData) => {
@@ -16,12 +17,14 @@ class MainContainer extends React.Component {
   componentDidMount() {
     let user = this.props.router.params.id;
 
-    if (!user) user = 9;
+    if (!user) {
+      // user = this.props.myId;
+      user = 3;
+    }
     this.props.getProfile(user);
   }
 
   render() {
-    console.log(this.props.router);
     return (
       <div>
         <Main {...this.props} />
@@ -39,6 +42,8 @@ const mapStateToProps = (state) => {
     aboutMe: state.home.profile.aboutMe,
     github: state.home.profile.contacts.github,
     posts: state.home.posts,
+    myId: state.login.id,
+    isAuth: state.login.auth,
   };
 };
 
@@ -46,6 +51,6 @@ const mapStateToProps = (state) => {
 //   console.log(formData);
 // };
 
-export default connect(mapStateToProps, { addPost, getProfile })(
+export default connect(mapStateToProps, { addPost, getProfile, getAuth })(
   withRouter(MainContainer)
 );

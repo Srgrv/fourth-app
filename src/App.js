@@ -12,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<MainContainer />} />
+          <Route path="/:id" element={<MainContainer />} />
           <Route path="collobarate/" element={<CollobaratesContainer />} />
           <Route path="messages/" element={<CollobaratesContainer />} />
           <Route path="subscribtions/" element={<CollobaratesContainer />} />

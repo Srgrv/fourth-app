@@ -2,6 +2,7 @@ import React from "react";
 import Collobarates from "../Collobarates";
 import { connect } from "react-redux";
 import { getUsers } from "../../../../BLL/collobaratesReducer";
+import withNavigate from "../../../../hoc/withNavigate";
 
 class CollobaratesContainer extends React.Component {
   componentDidMount() {
@@ -22,4 +23,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { getUsers })(CollobaratesContainer);
+export default connect(mapStateToProps, { getUsers })(
+  withNavigate(CollobaratesContainer)
+);

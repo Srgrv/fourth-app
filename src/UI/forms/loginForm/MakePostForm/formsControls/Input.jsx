@@ -7,6 +7,7 @@ const Input = ({ input, meta, ...props }) => {
   return (
     <div className={hasError ? classes.input : undefined}>
       <input {...input} {...props} />
+      {/* <span className={classes.span}>{hasError ? meta.error : undefined}</span> */}
     </div>
   );
 };

@@ -23,6 +23,7 @@ const LoginForm = (props) => {
             name="password"
             placeholder="password"
             validate={[required]}
+            type="password"
           />
         </div>
         <div className={classes.rememberMe}>
@@ -33,6 +34,9 @@ const LoginForm = (props) => {
             type="checkbox"
           />
           remember me
+        </div>
+        <div className={classes._error}>
+          {props.error ? props.error : undefined}
         </div>
         <div className={classes.button}>
           <button>add</button>

@@ -5,7 +5,7 @@ const Collobarates = (props) => {
   const friends = props.collobarates.map((item, index) => {
     return (
       <div key={index}>
-        <Collobarate name={item.name} avatar={item.avatar} />
+        <Collobarate name={item.name} avatar={item.avatar} id={item.id} />
       </div>
     );
   });

@@ -1,14 +1,19 @@
 import React from "react";
 import LoginReduxForm from "../../../forms/loginForm/LoginForm";
+import { Navigate } from "react-router-dom";
 
-const onSubmit = (formData) => {
-  console.log(formData);
-};
+const Login = (props) => {
+  const onSubmit = (formData) => {
+    props.login(formData.login, formData.password, formData.rememberMe);
+  };
 
-const Login = () => {
+  if (props.auth) {
+    return <Navigate to="/" />;
+  }
+
   return (
     <div>
-      <LoginReduxForm onSubmit={onSubmit} />
+      <LoginReduxForm onSubmit={onSubmit} {...props} />
     </div>
   );
 };
