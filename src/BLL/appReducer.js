@@ -20,7 +20,9 @@ export const setInitial = () => {
 };
 
 export const initialize = () => (dispatch) => {
-  dispatch(getAuth());
+  dispatch(getAuth()).then((response) => {
+    dispatch(setInitial());
+  });
 };
 
 export default appReducer;

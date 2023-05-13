@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import { Navigate } from "react-router-dom";
 
 const mapStateToProps = (state) => {
+  console.log(state.login.auth);
   return {
     auth: state.login.auth,
   };

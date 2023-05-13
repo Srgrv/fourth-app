@@ -16,10 +16,12 @@ class MainContainer extends React.Component {
 
   componentDidMount() {
     let user = this.props.router.params.id;
+    console.log(user);
+    console.log(this.props.myId);
 
     if (!user) {
-      // user = this.props.myId;
-      user = 3;
+      user = this.props.myId;
+      // user = 3;
     }
     this.props.getProfile(user);
   }

@@ -5,7 +5,7 @@ const SET_AUTH = "SET_AUTH";
 const DELETE_AUTH = "DELETE_AUTH";
 
 const defaultStore = {
-  id: null,
+  id: 10,
   login: null,
   email: null,
   auth: false,
@@ -32,15 +32,17 @@ export const deleteAuth = () => {
 
 export const getAuth = () => {
   return (dispatch) => {
-    authAPI.getAuth().then((response) => {
-      console.log(response.data.data);
-      dispatch(
-        setAuth(
-          response.data.data.id,
-          response.data.data.login,
-          response.data.data.email
-        )
-      );
+    return authAPI.getAuth().then((response) => {
+      console.log(response.data);
+      if (response.data.resultCode === 0) {
+        dispatch(
+          setAuth(
+            response.data.data.id,
+            response.data.data.login,
+            response.data.data.email
+          )
+        );
+      }
     });
   };
 };
@@ -64,7 +66,6 @@ export const login = (email, password, rememberMe) => {
 };
 
 export const logout = () => {
-  console.log("logout");
   return (dispatch) => {
     authAPI.deleteAuth().then((response) => {
       dispatch(deleteAuth());
