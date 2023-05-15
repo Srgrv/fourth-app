@@ -15,7 +15,6 @@ class App extends React.Component {
     this.props.initialize();
   }
   render() {
-    console.log(this.props.initial);
     if (!this.props.initial) {
       return <div>Hello</div>;
     }

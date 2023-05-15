@@ -33,7 +33,6 @@ export const deleteAuth = () => {
 export const getAuth = () => {
   return (dispatch) => {
     return authAPI.getAuth().then((response) => {
-      console.log(response.data);
       if (response.data.resultCode === 0) {
         dispatch(
           setAuth(

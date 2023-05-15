@@ -29,6 +29,19 @@ export const profileAPI = {
       return response.data;
     });
   },
+  getStatus(userId) {
+    return instance.get(`profile/status/${userId}`).then((response) => {
+      return response.data;
+    });
+  },
+  putStatus(status) {
+    return instance
+      .put(`profile/status`, { status: status })
+      .then((response) => {
+        console.log(response);
+        return response.data;
+      });
+  },
 };
 
 export const authAPI = {

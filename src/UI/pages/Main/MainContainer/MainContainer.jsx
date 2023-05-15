@@ -8,6 +8,8 @@ import { withRouter } from "../../../../hoc/withRouter";
 import { getProfile } from "../../../../BLL/homeReducer";
 import { addPost } from "../../../../BLL/homeReducer";
 import { getAuth } from "../../../../BLL/loginReducer";
+import { getStatus } from "../../../../BLL/homeReducer";
+import { putStatus } from "../../../../BLL/homeReducer";
 
 class MainContainer extends React.Component {
   onSubmit = (formData) => {
@@ -16,13 +18,13 @@ class MainContainer extends React.Component {
 
   componentDidMount() {
     let user = this.props.router.params.id;
-    console.log(user);
-    console.log(this.props.myId);
 
     if (!user) {
       user = this.props.myId;
       // user = 3;
     }
+
+    this.props.getStatus(user);
     this.props.getProfile(user);
   }
 
@@ -46,13 +48,14 @@ const mapStateToProps = (state) => {
     posts: state.home.posts,
     myId: state.login.id,
     isAuth: state.login.auth,
+    status: state.home.status,
   };
 };
 
-// const onSubmit = (formData) => {
-//   console.log(formData);
-// };
-
-export default connect(mapStateToProps, { addPost, getProfile, getAuth })(
-  withRouter(MainContainer)
-);
+export default connect(mapStateToProps, {
+  addPost,
+  getProfile,
+  getAuth,
+  getStatus,
+  putStatus,
+})(withRouter(MainContainer));

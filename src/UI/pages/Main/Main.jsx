@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Main.module.css";
+import Status from "../../components/Status/Status";
 
 const Main = (props) => {
   return (
@@ -8,6 +9,11 @@ const Main = (props) => {
         <img src={props.avatar} alt="" />
       </div>
       <div className={classes.name}>
+        <Status
+          status={props.status}
+          myId={props.myId}
+          putStatus={props.putStatus}
+        />
         <div>{props.fullName}</div>
         <div>Обо мне: {props.aboutMe}</div>
         <div>Гитхаб: {props.github}</div>
